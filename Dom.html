@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <h1 class="header">Learning Dom Manipulation</h1>
+        <img src="download.jpeg" id="myImage" alt="">
+        <p id="para"></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae numquam, 
+            quisquam nesciunt, commodi aliquam nisi nobis nam consequuntur vitae voluptatum 
+            recusandae dolore aspernatur accusantium sequi cum iusto, placeat omnis molestiae.</p>
+            <p class="header">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos quo est in reiciendis aut autem repellat 
+                placeat quae obcaecati. Obcaecati sequi unde dolorum, quaerat voluptatum non! Iste ex debitis voluptatibus?</p>
+    </div>
+    <script>
+        const rootNode=document.getElementById("root");
+        console.log(rootNode);
+        const paragraph=document.getElementsByTagName("p");
+        console.log(paragraph);
+        const headerClassElement=document.getElementsByClassName("header");
+        console.log(headerClassElement);
+        const element=document.querySelector("#root");
+        console.log(element);
+        const allElement=document.querySelectorAll(".header");
+        console.log(allElement);
+        
+        //change html content--
+        const header=document.querySelector(".header");
+        header.innerHTML="Dom manipulation in javascript";
+        document.getElementById("myImage").src="download2.jpg";
+        document.getElementById("para").innerHTML="<h3> Hello </h3>";
+
+
+
+
+    </script>
+</body>
+</html>
