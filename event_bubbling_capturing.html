@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #div1{
+        background-color: aqua;
+        width: 300px;
+        height: 200px;
+
+    }
+    #div2{
+        background-color: aqua;
+        width: 300px;
+        height: 200px;
+
+    }
+    #para1{
+        height: 100px;
+        width: 200px;
+        border: 2px solid black;
+    }
+    #para2{
+        height: 100px;
+        width: 200px;
+        border: 2px solid black;
+    }
+
+</style>
+<body>
+    <div id="div1">
+        <h1>event bubbling</h1>
+        <p id="para1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur ducimus, minima 
+             cumque dolore dolor excepturi vel nobis cum 
+            non. </p>
+    </div>
+    <div id="div2">
+        <h1>event capturing</h1>
+        <p id="para2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Porro itaque id odit corrupti consectetur quaerat  Atque voluptas 
+        </p>
+    </div>
+    <script>
+        //event bubbling--first inner element handled than outer element is handled
+        document.getElementById("div1").addEventListener("click",function(){
+            alert("outer element is clicked");
+        },false);
+        document.getElementById("para1").addEventListener("click",function(){
+            alert("inner element is clicked");
+        },false);
+
+        //event capturing-- first outer element handled than inner element
+        document.getElementById("div2").addEventListener("click",function(){
+            alert("outer element is clicked");
+        },true);
+        document.getElementById("para2").addEventListener("click",function(){
+            alert("inner element is clicked");
+        },true);
+
+
+
+    </script>
+</body>
+</html>
